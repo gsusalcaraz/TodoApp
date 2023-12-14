@@ -78,6 +78,15 @@ dependencies {
     // LIVEDATA
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
     implementation("androidx.compose.runtime:runtime-livedata:1.5.4")
+
+    // ROOM
+    val room_version = "2.5.0"
+    implementation("androidx.room:room-runtime:$room_version")
+    annotationProcessor("androidx.room:room-compiler:$room_version")
+    // To use Kotlin annotation processing tool (kapt)
+    kapt("androidx.room:room-compiler:$room_version")
+    // optional - Kotlin Extensions and Coroutines support for Room
+    implementation("androidx.room:room-ktx:$room_version")
 }
 
 // Allow references to generated code
